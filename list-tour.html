@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Janela Daculong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List a tour</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <script src="https://kit.fontawesome.com/5f8be564ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="other-page-header">
+        <nav>
+            <ul>
+                <div class="div-logo">
+                    <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
+                </div>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Edit Your Tours</a></li>
+                <li><a href="list-tour.html">List Your Tours</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="list-tour-container">
+        <div class="listour-img-b1"></div>
+        <form>
+            <div class="list-tour-title">
+                <h3>List a Tour</h3>
+            </div>
+            <div class="form-list-tour">
+                <div class="form-group" style="width: 35%">
+                    <label for="ddate" class="dd">Tour Date</label>
+                </div>
+                <div class="form-group">
+                    <label>From:</label>
+                    <input type ="date" id="ddate" name="ddate">
+                </div>
+                <div class="form-group">
+                    <label>To:</label>
+                    <input type ="date" id="ddate" name="ddate">
+                </div>
+                <div class="form-group">
+                    <label>Destination:</label>
+                    <select id="destination" name="destination" class="destination-list">
+                        <option value="">Sagada</option>
+                        <option value="">El Nido</option>
+                        <option value="">Siargao</option>
+                        <option value="">Bohol</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Upload image/s of this tour:</label>
+                    <input type="file" id="file" name="file" accept="image/*" class="img-tour">
+                </div>
+                <div class="form-group">
+                    <label>Available Transportation:</label>
+                    <select id="transpo" name="transpo" class="transpo-list">
+                        <option value="">Toyota Hi-Ace Grandia</option>
+                        <option value="">Hyundai Starex</option>
+                        <option value="">Isuzu Traviz</option>
+                        <option value="">Nissan NV350</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Add Pick-Up Location/s:</label>
+                    <select id="pick-up-loc" name="pick-up-loc" class="pick-up-loc">
+                        <option value="">Sagada</option>
+                        <option value="">El Nido</option>
+                        <option value="">Siargao</option>
+                        <option value="">Bohol</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Indicate Tour Inclusions:</label>
+                    <div id="enter-inc">
+                        <input type="text" id="userInput" placeholder="Enter each inclusions">
+                        <button id="btn-enter"><i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i></button>
+                    </div>
+                </div>
+                <div class="inclusion-list">
+                    <label>Inclusions Description</label>
+                    <ul id="inclusion-ul">
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label>Does this tour has Hotel Accomodation?</label>
+                    <div class="toggler-radio">
+                        <div class="yes">
+                            <input type="radio" id="yes-hotel" name="hotel-acc" value="Yes">
+                            <label for="yes-hotel">Yes</label>
+                        </div>
+                        <div class="space-between"></div>
+                        <div class="no">
+                            <input type="radio" id="no-hotel" name="hotel-acc" value="Yes">
+                            <label for="no-hotel">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-link">
+                    <input type="text" id="gmap-link" placeholder="Paste/Pin Map Link">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label>Does this tour offers Free Meals?</label>
+                    <div class="toggler-radio">
+                        <div class="yes">
+                            <input type="radio" id="yes-meal" name="has-meals" value="Yes">
+                            <label for="yes-meal">Yes</label>
+                        </div>
+                        <div class="space-between"></div>
+                        <div class="no">
+                            <input type="radio" id="no-meal" name="has-meals" value="Yes">
+                            <label for="no-meals">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="include-meals">
+                    <label>Select Inclusion/s:</label>
+                    <div class="meal">
+                        <input type="checkbox" id="breakfast" name="meals">
+                        <label for="breakfast">Breakfast</label>
+                    </div>
+                    <div class="meal">
+                        <input type="checkbox" id="lunch" name="meals">
+                        <label for="lunch">Lunch</label>
+                    </div>
+                    <div class="meal">
+                        <input type="checkbox" id="dinner" name="meals">
+                        <label for="dinner">Dinner</label>
+                    </div>
+                    <div class="meal">
+                        <input type="checkbox" id="snacks" name="meals">
+                        <label for="snacks">Snacks</label>        
+                    </div>          
+                </div>
+                <div class="form-group">
+                    <label>Tour Price:</label>
+                    <div class="input-group">
+                        <input type="number" name="amount" id="amount" placeholder="Amount">
+                    </div>
+                </div>
+                <div class="btn-add-tour">
+                    <button id="btn-addtour">Add Tour</button>
+                </div>
+            </div>
+        </form>
+        <div class="listour-img-b2"></div>
+    </div>  
+    </main>
+    <script src="list-tour-script.js"></script>
+</body>
+</html>

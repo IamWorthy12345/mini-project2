@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body:not(#home){
+    /* background: rgb(240, 140, 74);
+    background: linear-gradient(90deg, rgba(240, 140, 74, 1) 0%, rgba(238, 213, 144, 1) 33%, rgba(67, 217, 192, 1) 100%); */
+    background: rgb(67,217,192);
+    background: linear-gradient(90deg, rgba(67,217,192,1) 0%, rgba(238,213,144,1) 80%);
+    position: relative;
+}
+/* body:not(#home)::after{
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/pattern.png");
+    background-size: 80px;
+    z-index: -1;
+    opacity: 0.3;
+} */
+a{
+    text-decoration: none;
+    color: #EED590;
+}
+button, input[type="submit"]{
+    cursor: pointer;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    color:#223656;
+    font-size: 30px;
+}
+#other-page-header{
+    background-color: rgb(34, 54, 86, 0.8);
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+.div-logo{
+    flex: 5;
+    cursor: pointer;
+}
+nav li{
+    position: relative;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+    font-size: 1em;
+    text-align: center;
+    list-style: none;
+    flex: 1;
+}
+nav li::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #43D9C0;
+    width: 0;
+    height: 3px;
+    content: "";
+    transition: all 0.2s;
+}
+nav li:hover::after{
+    width: 100%;
+}
+.hero-image{
+    position: absolute;
+    top: 0;
+    background-color: #223656;
+    background-image: url("images/hero-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+.hero-text{
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+.hero-text h2{
+    font-family: 'Shantell Sans', cursive;
+    color: #43D9C0;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+.hero-text h2:first-of-type{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    letter-spacing: 0;
+    font-weight: bolder;
+}
+.hero-text button{
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-color: #43D9C0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F08C4A;
+    color:#223656;
+    font-size: 18px;
+}
+
+
+.search-tour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.search-tour label{
+    font-family: 'Poppins', sans-serif;
+    color:#223656;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.search-tour input{
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:#223656;
+    border-radius: 7px;
+    padding: 8px 10px;
+}
+.search-tour button{
+    margin-left: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.first-three{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 35px;
+    position: relative;
+    border-radius: 10px;
+    background-image: url(images/destination-placeholder.png);
+}
+.card:hover .inclusions{
+    transform: scaleY(1);
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    color:#223656;
+    font-size: 30px;
+}
+/* #card1{
+    background-image: url(images/siargao.jpg);
+}
+#card2{
+    background-image: url(images/bohol.jpg);
+}
+#card3{
+    background-image: url(images/sagada.jpg);
+} */
+.inclusions{
+    width: 100%;
+    height: 150px;
+    top: 50%;
+    background-color: rgba(22, 36, 56, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    color:#EED590;
+    position: absolute;
+    text-align: center;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+.card button{
+    top: 100%;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: #223656;
+    color: #EED590;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    border-color: #223656;
+}
+
+
+.signin-container{
+    height: 100vh;
+    background-image: url(images/signin-bg.jpg);
+    background-size: cover;
+}
+.signin-container h3{
+    margin-bottom: 20px;
+}
+.signin-container form{
+    height: 60vh;
+    width: 35%;
+    background: rgb(67,217,192);
+    background: linear-gradient(90deg, rgba(67,217,192,1) 0%, rgba(238,213,144,1) 80%);
+    margin: 50px;
+    padding: 50px;
+    float: right;
+    border-radius: 10px;
+    position: relative;
+}
+.fa-arrow-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #223656;
+    font-size: 1.5em;
+    margin: 20px;
+    cursor: pointer;
+    display: none;
+}
+.joiner-signup{
+    display: none;
+}
+.joiner-login .form-group{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.joiner-login label{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1.2em;
+    flex: 1;
+}
+.joiner-login input{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1.2em;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #223656;
+    flex: 1;
+}
+#joiner-signin-buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#joiner-signin-buttons button{
+    width: 50%;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: #43D9C0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F08C4A;
+    color:#223656;
+    font-size: 1.2em;
+}
+#joiner-signin-buttons p{
+    color: #223656;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.joiner-signup .form-group{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.joiner-signup label{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1em;
+    flex: 1;
+}
+.joiner-signup input{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #223656;
+    flex: 1;
+}
+
+/* List Tour */
+.list-tour-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.listour-img-b1{
+    background-image: url(images/list-tour-bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+.list-tour-container form{
+    flex: 2.5;
+    background-color: rgba(22, 36, 56, 0.2);
+    height: max-content;
+    margin: 50px;
+    border-radius: 10px;
+}
+.list-tour-title{
+    text-align: center;
+    margin-top: 20px;
+}
+.form-list-tour{
+    padding: 20px;
+}   
+.form-list-tour .form-group{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.form-list-tour .form-group:nth-child(2), .form-list-tour .form-group:nth-child(3){
+    margin-top: 5px;
+}
+.form-list-tour label{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1em;
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+.form-list-tour input, .toggler-radio, select, #enter-inc, .input-group{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1em;
+    flex: 2;
+}
+.inclusion-list{
+    display: none;
+    margin-top: 10px;
+    background-color: #EED590;
+    border: 2px solid #223656;
+    border-radius: 10px;
+}
+#inclusion-ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #223656;
+    border-radius: 10px;
+}
+.delete{
+    display: none;
+}
+.form-list-tour input, select{
+    padding: 10px 5px;
+}
+.form-list-tour .map-link, #include-meals{
+    display: none;
+}
+.inclusion-list, .map-link, #include-meals{
+    align-items: center;
+    padding: 20px;
+}
+#gmap-link{
+    width: 100%;
+}
+#include-meals{
+    border: 2px solid #223656;
+    border-radius: 10px;
+    background-color: #EED590;
+    flex-direction: row;
+}
+.yes, .no, .meal{
+    display: flex;
+    align-items: center;
+}
+.yes label, .no label, .meal label{
+    margin-left: 10px;
+}
+input[type='radio'], input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+input[type="date"], input[type="file"], select{
+    cursor: pointer;
+}
+.toggler-radio, #enter-inc{
+    display: flex;
+    justify-content: center;
+}
+.space-between{
+    margin: 0 50px;
+}
+.input-group {
+    position: relative;
+}
+.input-group::before {
+    content: "\20B1";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    z-index: 1;
+}
+.input-group input[type="number"] {
+    padding-left: 30px;
+}
+.btn-add-tour{
+    margin-top: 20px;
+    text-align: center;
+}
+.form-list-tour button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-color: #43D9C0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F08C4A;
+    color:#223656;
+    font-size: 1.2em;
+}
+.listour-img-b2{
+    background-image: url(images/list-tour-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
