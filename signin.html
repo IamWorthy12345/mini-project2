@@ -44,7 +44,13 @@
                         <label for="joiner-login-pass">Password:</label>
                         <input type ="password" id="joiner-login-pass" name="joiner-login-pass" placeholder="Enter Password" required>
                     </div>
+                    <div class="form-group" id="joiner-signin-buttons">
+                        <button>Log In</button>
+                        <p id="btn-signup-joiner" type="button">Sign Up</p>
+                    </div>
                 </div>
+            </form>
+            <!-- <form>
                 <div class="joiner-signup">
                     <div class="form-group">
                         <label for="first-name">First Name:</label>
@@ -79,111 +85,9 @@
                     <button>Log In</button>
                     <p id="btn-signup-joiner" type="button">Sign Up</p>
                 </div>
-            </form>
+            </form> -->
         </div>
-        
-        <form>
-            <div class="signin-title">
-                <h2>Sign In as Travel Operator</h2>
-            </div>
-            <div class="operator-sign-up">
-                <div class="form-group">
-                    <label for="company-name">Company Name:</label>
-                    <input type ="text" id="company-name" name="company-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="business-address">Business Address:</label>
-                    <input type ="text" id="business-address" name="business-address" required>
-                </div>
-                <div class="form-group">
-                    <label for="company-num">Company Contact No:</label>
-                    <input type ="tel" id="company-num" name="company-num" required minlength="11" maxlength="11">
-                </div>
-                <div class="form-group">
-                    <label for="operator-name">Company Username:</label>
-                    <input type ="text" id="operator-name" name="joiner-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="operator-email">Company E-mail Address:</label>
-                    <input type ="email" id="operator-email" name="operator-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="operator-pass">Set Password:</label>
-                    <input type ="password" id="operator-pass" name="operator-pass" required>
-                    <i class="far fa-eye" id="toggle" style="margin-left: -30px; cursor: pointer;"></i>
-                </div>
-                <div class="form-group">
-                    <label for="operator-pass-confirm">Confirm Password:</label>
-                    <input type ="password" id="operator-pass-confirm" name="operator-pass-confirm" required>
-                    <i class="far fa-eye" id="toggle" style="margin-left: -30px; cursor: pointer;"></i>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Sign Up" class="btn-signup">
-                    <input type="submit" value="Log In" class="btn-login">
-                </div>
-                <div class="signin-title">
-                    <h2>Business Information</h2>
-                </div>
-                <div class="form-group">
-                    <label>Upload copy of DOT Permit:</label>
-                    <input type="file" id="file" name="file" accept="image/*" class="permit">
-                </div>
-                <div class="form-group">
-                    <label for="vehicle">Add Company Vehicle/s:</label>
-                    <input type ="text" id="vehicle" name="vehicle">
-                    <input type="submit" value="Add" class="btn-add-car">
-                    <div class="container">
-                        <input type="file" value="Upload Image" id="file" name="file" accept="image/*" class="permit">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="pick-up">Add Pick-Location/s:</label>
-                    <input type ="text" id="pick-up" name="pick-up">
-                    <input type="submit" value="Add" class="btn-add-loc">
-                    <div class="container">
-                        <input type="file" value="Upload Image" id="file" name="file" accept="image/*" class="pick-up-loc">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="accomodation">Add Company Accomodation/s:</label>
-                    <input type ="text" id="accomodation" name="accomodation">
-                    <input type="submit" value="Add" class="btn-add-acc">
-                    <div class="container">
-                        <input type="file" value="Upload Image" id="file" name="file" accept="image/*" class="accomodation">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="po">Payment Modes:</label>
-                    <select id="mop" name="mop" class="pay">
-                        <option value="Cash">Cash on Delivery</option>
-                        <option value="Transfer">Bank Transfer</option>
-                        <option value="Transfer">GCash</option>
-                        <option value="CCard">Credit Card</option>
-                    </select>
-                </div>
-            </div>
-            <div class="operator-log-in">
-                <div class="form-group">
-                    <label for="operator-login-name">Username:</label>
-                    <input type ="text" id="joiner-login-name" name="joiner-login-name" required>
-                </div>
-                <label>OR</label>
-                <div class="form-group">
-                    <label for="operator-email">E-mail Address:</label>
-                    <input type ="email" id="operator-email" name="operator-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="operator-login-pass">Confirm Password:</label>
-                    <input type ="password" id="operator-login-pass" name="operator-login-pass" required>
-                    <i class="far fa-eye" id="toggle" style="margin-left: -30px; cursor: pointer;"></i>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Sign Up" class="btn-signup">
-                    <input type="submit" value="Log In" class="btn-login">
-                </div>
-            </div>
-        </form>
     </main>
-    <script src="scrip.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
