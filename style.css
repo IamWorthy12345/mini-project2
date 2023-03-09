@@ -117,8 +117,10 @@ nav li:hover::after{
     border-color: #43D9C0;
     font-family: 'Montserrat', sans-serif;
     background-color:#F08C4A;
-    color:#223656;
     font-size: 18px;
+}
+.hero-text button a{
+    color:#223656;
 }
 
 
