@@ -123,7 +123,6 @@ nav li:hover::after{
     color:#223656;
 }
 
-
 .search-tour{
     display: flex;
     justify-content: center;
@@ -209,7 +208,7 @@ h3{
     border-color: #223656;
 }
 
-
+/* Sign In Menu */
 .signin-container{
     height: 100vh;
     background-image: url(images/signin-bg.jpg);
@@ -218,7 +217,7 @@ h3{
 .signin-container h3{
     margin-bottom: 20px;
 }
-.signin-container form{
+.joiner-login{
     height: 60vh;
     width: 35%;
     background: rgb(67,217,192);
@@ -228,6 +227,26 @@ h3{
     float: right;
     border-radius: 10px;
     position: relative;
+}
+.signin-container .form-group{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.signin-container label{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1.2em;
+    flex: 1;
+}
+.signin-container input{
+    font-family: 'Montserrat', sans-serif;
+    color:#223656;
+    font-size: 1.2em;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #223656;
+    flex: 1;
 }
 .fa-arrow-left{
     position: absolute;
@@ -241,38 +260,27 @@ h3{
 }
 .joiner-signup{
     display: none;
-}
-.joiner-login .form-group{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-.joiner-login label{
-    font-family: 'Montserrat', sans-serif;
-    color:#223656;
-    font-size: 1.2em;
-    flex: 1;
-}
-.joiner-login input{
-    font-family: 'Montserrat', sans-serif;
-    color:#223656;
-    font-size: 1.2em;
-    padding: 10px 10px;
+    height: max-content;
+    width: 35%;
+    background: rgb(67,217,192);
+    background: linear-gradient(90deg, rgba(67,217,192,1) 0%, rgba(238,213,144,1) 80%);
+    margin: 50px;
+    padding: 50px;
+    float: right;
     border-radius: 10px;
-    border: 1px solid #223656;
-    flex: 1;
+    position: relative;
 }
-#joiner-signin-buttons{
+.div-btn-signin{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-#joiner-signin-buttons button{
+.btn-signin{
     width: 50%;
     cursor: pointer;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 15px;
     border-color: #43D9C0;
     font-family: 'Montserrat', sans-serif;
@@ -280,32 +288,22 @@ h3{
     color:#223656;
     font-size: 1.2em;
 }
-#joiner-signin-buttons p{
+.div-btn-signin a{
     color: #223656;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .joiner-signup .form-group{
     margin-top: 15px;
-    display: flex;
-    align-items: center;
 }
 .joiner-signup label{
-    font-family: 'Montserrat', sans-serif;
-    color:#223656;
     font-size: 1em;
-    flex: 1;
 }
 .joiner-signup input{
-    font-family: 'Montserrat', sans-serif;
-    color:#223656;
     font-size: 1em;
     padding: 5px;
-    border-radius: 10px;
-    border: 1px solid #223656;
-    flex: 1;
 }
 
 /* List Tour */
