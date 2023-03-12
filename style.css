@@ -1,31 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
 body:not(#home){
-    /* background: rgb(240, 140, 74);
-    background: linear-gradient(90deg, rgba(240, 140, 74, 1) 0%, rgba(238, 213, 144, 1) 33%, rgba(67, 217, 192, 1) 100%); */
     background: rgb(67,217,192);
     background: linear-gradient(90deg, rgba(67,217,192,1) 0%, rgba(238,213,144,1) 80%);
     position: relative;
 }
-/* body:not(#home)::after{
-    content: "";
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/pattern.png");
-    background-size: 80px;
-    z-index: -1;
-    opacity: 0.3;
-} */
 a{
     text-decoration: none;
     color: #EED590;
@@ -51,6 +35,9 @@ nav ul{
     flex: 5;
     cursor: pointer;
 }
+#store-user{
+    color:#F08C4A;
+}
 nav li{
     position: relative;
     cursor: pointer;
@@ -61,7 +48,10 @@ nav li{
     list-style: none;
     flex: 1;
 }
-nav li::after {
+nav li:first-of-type{
+    cursor: none;
+}
+nav li:not(:first-of-type):after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -150,66 +140,128 @@ nav li:hover::after{
 .search-tour button{
     margin-left: 10px;
     padding: 8px 10px;
-    border: 2px outset #43D9C0;
+    border: 2px outset #EED590;
     border-radius: 10px;
     font-size: 20px;
 }
 .search-tour button:hover{
-    background-color: aquamarine;
+    background-color:#223656;
+    color: #EED590;
 }
 .first-three{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 30px;
 }
 .card{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 300px;
-    width: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top 35px;
+    height: 500px;
     position: relative;
-    border-radius: 10px;
-    /* background-image: url(images/destination-placeholder.png); */
+    margin: 20px;
 }
-.card:hover .inclusions{
-    transform: scaleY(1);
-}
-#card1{
-    background-image: url(images/siargao.jpg);
-}
-#card2{
-    background-image: url(images/bohol.jpg);
-}
-#card3{
-    background-image: url(images/sagada.jpg);
-}
-.inclusions{
+.carousel{
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 150px;
-    top: 50%;
-    background-color: rgba(22, 36, 56, 0.5);
-    font-family: 'Montserrat', sans-serif;
-    color:#EED590;
+    height: 100%;
+    position: relative;
+}
+.img-div{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    overflow: hidden;
+}
+.carousel-item{
     position: absolute;
-    text-align: center;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
 }
 .card button{
-    top: 100%;
+    /* top: 100%; */
     padding: 10px 30px;
     border-radius: 15px;
     background-color: #223656;
     color: #EED590;
     font-family: 'Montserrat', sans-serif;
-    position: absolute;
+    font-size: 18px;
+    /* position: absolute; */
     border-color: #223656;
 }
+.carousel-arrow {
+    /* position: absolute; */
+    padding: 0 10px;
+    font-size: 36px;
+    color: #EED590;
+    cursor: pointer;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(22, 36, 56, 0.3);
+    border-radius: 10px;
+    display: none;
+}
+.left-arrow {
+    right: 100%;
+    border: none;
+    background-color: rgba(22, 36, 56, 0);
+    z-index: 3;
+}
+  .right-arrow {
+    left: 100%;
+    z-index: 3;
+}
+#card1{
+    flex: 1;
+}
+#card2{
+    flex: 1;
+}
+/* #card3{
+    background-image: url(images/sagada.jpg);
+} */
+.card:hover .carousel-arrow{
+    display: flex;
+}
+.inclusions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left:0;
+    height: 100%;
+    width: 80%;
+    padding-left: 45px;
+    background-color: rgba(22, 36, 56, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:#EED590;
+    position: absolute;
+    /* text-align: center; */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    border-radius: 10px;
+}
+.card:hover .inclusions{
+    transform: scaleX(1);
+}
+.card p{
+    margin-bottom: 8px;
+}
+.inclusions li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
 
 /* Sign In Menu */
 .signin-container{
@@ -249,7 +301,7 @@ nav li:hover::after{
     padding: 10px 10px;
     border-radius: 10px;
     border: 1px solid #223656;
-    flex: 1;
+    flex: 2;
 }
 .fa-arrow-left{
     position: absolute;
@@ -299,18 +351,18 @@ nav li:hover::after{
     margin-top: 40px;
 }
 .joiner-signup .form-group{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .joiner-signup label{
     font-size: 1em;
 }
 .joiner-signup input{
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 5px;
 }
 
 /* Book Tour */
-.list-tour-container{
+.book-tour-container{
     height: 100%;
     width: 100%;
     display: flex;
@@ -322,14 +374,33 @@ nav li:hover::after{
     background-position: center;
     flex: 1;
 }
+.listour-img-b2{
+    background-image: url(images/list-tour-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+.book-tour-title, .div-btn-book{
+    text-align: center;
+    margin-top: 20px;
+}
 #form-book-tour{
+    padding: 20px;
+}
+.book-tour-container form{
     flex: 2.5;
     background-color: rgba(22, 36, 56, 0.2);
     height: max-content;
     margin: 50px;
+    padding: 20px;
     border-radius: 10px;
 }
-#form-book-tour label{
+#form-book-tour .form-group{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+#form-book-tour label:not(.tour-duration){
     font-family: 'Montserrat', sans-serif;
     color:#223656;
     font-size: 1em;
@@ -337,16 +408,24 @@ nav li:hover::after{
     text-align: right;
     padding-right: 20px;
 }
-.form-list-tour input, select, .form-subgroup {
+#form-book-tour input:not(input[type="radio"]), select, .form-subgroup {
     font-family: 'Montserrat', sans-serif;
     color:#223656;
     font-size: 1em;
     flex: 2;
 }
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
 .form-subgroup{
     display: flex;
+    flex-wrap: wrap;
 }
-.form-list-tour input, select{
+#form-book-tour input, select{
     padding: 10px 5px;
 }
 #btn-change-tour{
@@ -373,27 +452,54 @@ nav li:hover::after{
     color:#223656;
     font-size: 1.2em;
 }
-.list-tour-title, .div-btn-book{
-    text-align: center;
-    margin-top: 20px;
-}
-.form-list-tour{
-    padding: 20px;
-}   
-.form-list-tour .form-group{
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.listour-img-b2{
-    background-image: url(images/list-tour-bg2.jpg);
-    background-size: cover;
-    background-position: center;
-    flex: 1;
-}
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+#input-num {
+    position: relative;
+}
+#input-num::before {
+    content: "\20B1";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    z-index: 1;
+}
+#input-num input[type="number"] {
+    padding-left: 30px;
+}
+#inclusion-div{
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 2px outset #223656;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#EED590;
+    color:#223656;
+    font-size: 1em;
+    height: max-content;
+}
+#inclusion-ul li{
+    margin-left: 15px;
+}
+#tour-dates input[type="radio"]{
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+/* Tour History Menu */
+.tour-history-container{
+    height: 100%;
+    position: relative;
+}
+.tour-history-bg-image{
+    background-image: url(images/tour-history-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
 }

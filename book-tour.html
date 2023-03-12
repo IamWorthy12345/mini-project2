@@ -18,22 +18,46 @@
                 <div class="div-logo">
                     <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
                 </div>
-                <li><a href="#">Tour History</a></li>
-                <li><a href="#">Edit Your Tours</a></li>
-                <li><a href="#">Book Your Tour</a></li>
+                <li><label id="store-user"></label></li>
+                <li><a href="tour-history.html">Tour History</a></li>
+                <li><a href=destinations.html>Destinations</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    <div class="list-tour-container">
+    <div class="book-tour-container">
         <div class="listour-img-b1"></div>
-        <form id="form-book-tour">
-            <div class="list-tour-title">
+        <form>
+            <div class="book-tour-title">
                 <h3>Book Your Tour</h3>
             </div>
-            <div class="form-list-tour">
-                <div class="form-group" style="width: 35%">
-                    <label for="ddate" class="dd">Tour Date</label>
+            <div id="form-book-tour">
+                <div class="form-group">
+                    <label>Destination:</label>
+                    <div class="form-subgroup">
+                        <input type="text" id="destination" name="destination" disabled>
+                        <button id="btn-change-tour" onclick="event.preventDefault(); window.location.href='destinations.html'">Change</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose Duration</label>
+                    <div class="form-subgroup">
+                        <input type="radio" id="three-days" name="duration">
+                        <label for="three-days" class="tour-duration">3 Days 2 Nights</label>
+                        <input type="radio" id="two-days" name="duration">
+                        <label for="two-days" class="tour-duration">2 Days 1 Night</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose Start Date</label>
+                    <div class="form-subgroup" id="tour-dates">
+                        <input type="radio" id="date-1" name="tour-date">
+                        <label for="date-1" id="label-date1" class="tour-date"></label>
+                        <input type="radio" id="date-2" name="tour-date">
+                        <label for="date-2" id="label-date2" class="tour-date"></label>
+                        <input type="radio" id="date-3" name="tour-date">
+                        <label for="date-3" id="label-date3" class="tour-date"></label>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>From:</label>
@@ -44,24 +68,12 @@
                     <input type ="date" id="to-date" name="to-date" disabled>
                 </div>
                 <div class="form-group">
-                    <label>Destination:</label>
-                    <div class="form-subgroup">
-                        <input type ="text" id="destination" name="destination" disabled>
-                        <button id="btn-change-tour" onclick="event.preventDefault(); window.location.href='destinations.html'">Change</button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Choose Transportation:</label>
-                    <select id="transpo" name="transpo" class="transpo-list">
-                        <option value="">Toyota Hi-Ace Grandia</option>
-                        <option value="">Hyundai Starex</option>
-                        <option value="">Isuzu Traviz</option>
-                        <option value="">Nissan NV350</option>
-                    </select>
+                    <label>Round Trip Vehicle</label>
+                    <input type ="text" id="rt-transpo" name="rt-transpo" disabled>
                 </div>
                 <div class="form-group" id="avail-seats">
-                    <label>Seats Available:</label>
-                    <input type="text" id="seat-count" name="seat-count" disabled>
+                    <label>No. of Seats:</label>
+                    <input type="number" id="seat-count" name="seat-count">
                 </div>
                 <div class="form-group">
                     <label>Choose Pick-Up Location</label>
@@ -74,14 +86,16 @@
                 </div>
                 <div class="form-group" id="tour-inclusions">
                     <label>Tour Inclusions</label>
-                    <div class="form-subgroup">
+                    <div id="inclusion-div" class="form-subgroup">
                         <ul id="inclusion-ul">
                         </ul>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Tour Price:</label>
-                    <input type="number" name="amount" id="amount" placeholder="Amount" disabled>
+                    <div class="form-subgroup" id="input-num">
+                        <input type="number" name="amount" id="amount" disabled>
+                    </div>
                 </div>
                 <div class="div-btn-book">
                     <button id="btn-addtour">Book Tour</button>
@@ -92,5 +106,50 @@
     </div>  
     </main>
     <!-- <script src="book-tour-script.js"></script> -->
+    <script>
+        const OUT_DEST = localStorage.getItem("output_destination");
+        document.getElementById("destination").value = OUT_DEST;
+        const TDATE1 = localStorage.getItem("output_date1");
+        document.getElementById("label-date1").textContent = TDATE1;
+        const TDATE2 = localStorage.getItem("output_date2");
+        document.getElementById("label-date2").textContent = TDATE2;
+        const TDATE3 = localStorage.getItem("output_date3");
+        document.getElementById("label-date3").textContent = TDATE3;
+
+        const PRICE_3D = localStorage.getItem("output_3d_price");
+        const PRICE_2D = localStorage.getItem("output_2d_price");
+        const RADIO_3D = document.querySelector("#three-days");
+        const RADIO_2D = document.querySelector("#two-days");
+        const TOUR_AMOUNT = document.querySelector("#amount");
+        RADIO_3D.addEventListener('change', function(){
+            TOUR_AMOUNT.value = PRICE_3D;
+        });
+        RADIO_2D.addEventListener('change', function(){
+            TOUR_AMOUNT.value = PRICE_2D;
+        });
+
+        const inclusions = localStorage.getItem("output_inclusions");
+        const inclusionList = document.getElementById("inclusion-ul");
+        if (inclusions) {
+        const inclusionsArray = JSON.parse(inclusions);
+
+        for (let i = 0; i < inclusionsArray.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = inclusionsArray[i];
+            inclusionList.appendChild(li);
+        }
+        }
+
+
+
+        // if (OUT_DEST) {
+        //     document.getElementById("destination").value = OUT_DEST;
+        //     //document.getElementById("label-date1").textContent = TDATE1;
+        //     //localStorage.removeItem("output_destination"); // Remove the item to clean up after ourselves
+        // } else {
+        //   document.getElementById("destination").value = "Value not found";
+        //   //document.getElementById("label-date1").textContent = "Value not found";
+        // }
+      </script>
 </body>
 </html>
