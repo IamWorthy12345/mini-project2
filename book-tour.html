@@ -20,7 +20,7 @@
                 </div>
                 <li><label id="store-user"></label></li>
                 <li><a href="tour-history.html">Tour History</a></li>
-                <li><a href=destinations.html>Destinations</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
             </ul>
         </nav>
     </header>
@@ -84,6 +84,15 @@
                         <option value="">Lucena</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Choose Pick-Up Time</label>
+                    <select id="pick-up-time" name="pick-up-time" class="pickup-time">
+                        <option value="">4:00am</option>
+                        <option value="">6:00am</option>
+                        <option value="">6:00pm</option>
+                        <option value="">7:00pm</option>
+                    </select>
+                </div>
                 <div class="form-group" id="tour-inclusions">
                     <label>Tour Inclusions</label>
                     <div id="inclusion-div" class="form-subgroup">
@@ -96,6 +105,10 @@
                     <div class="form-subgroup" id="input-num">
                         <input type="number" name="amount" id="amount" disabled>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label>Travel Made by:</label>
+                    <input type="text" id="book-by" name="book-by" placeholder="Type your Full Name" required>
                 </div>
                 <div class="div-btn-book">
                     <button id="btn-addtour">Book Tour</button>

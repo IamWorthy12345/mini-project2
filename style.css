@@ -493,13 +493,84 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* Tour History Menu */
-.tour-history-container{
+/* .tour-history-container{
     height: 100%;
+    width: 100%;
     position: relative;
-}
-.tour-history-bg-image{
-    background-image: url(images/tour-history-bg.jpg);
+} */
+.tour-history-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/tour-history-bg.png);
     background-size: cover;
-    background-position: center;
-    position: absolute;
+    background-position: center top 0;
+    height: 100vh;
+}
+.history-title{
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: rgba(238,213,144,1);
+    border-radius: 15px;
+}
+.div-tour-details{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgb(67,217,192);
+    background: linear-gradient(90deg, rgba(67,217,192,0.8) 0%, rgba(238,213,144,0.8) 80%);
+    border-radius: 15px;
+}
+.div-tour-details img{
+    flex: 1;
+}
+.tour-details{
+    margin-left: 15px;
+    width: fit-content;
+    border: 1px solid rgb(34, 54, 86, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 3;
+}
+.tour-details .form-group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(34, 54, 86, 0.4);
+}
+.tour-details .booked-label{
+    /* flex: 3; */
+    width: 40%;
+    margin-left: 10px;
+}
+.tour-details .booked-output{
+    /* flex: 4; */
+    width: 60%;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+.tour-details label{
+    font-family: 'Shantell Sans', cursive;
+    color:#223656;
+    font-size: 0.9em;
+}
+.button-group{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin-left: 15px;
+    flex: 1;
+}
+.button-group button{
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #223656;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F08C4A;
+    color:#223656;
+    font-size: 0.9em;
 }
