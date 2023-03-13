@@ -19,8 +19,8 @@
                     <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
                 </div>
                 <li><label id="store-user">No User</label></li>
-                <li><a href=signin.html>Sign In</a></li>
-                <li><a href=destinations.html>Destinations</a></li>
+                <li><a href="signin.html" data-target="signin">Sign In</a></li>
+                <li><a href=destinations.html data-target="destinations">Destinations</a></li>
                 <li><a href="#">Reviews</a></li>
             </ul>
         </nav>
@@ -35,6 +35,22 @@
             </div>
         </div>
     </header>
+    <!-- <script>
+        // Get the value of the current page
+        const currentPage = document.body.dataset.page;
+
+        // Get all the menu items
+        const menuItems = document.querySelectorAll('nav li');
+
+        // Loop through each menu item and add the .active class to the one with the matching data-page attribute
+        menuItems.forEach(item => {
+        if (item.dataset.page === currentPage) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+        });
+    </script> -->
     <script src="home.js"></script>
 </body>
 </html>

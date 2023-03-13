@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-queries.css">
 </head>
-<body>
+<body id="signin">
     <header id="other-page-header">
         <nav>
             <ul>
@@ -19,8 +19,8 @@
                     <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
                 </div>
                 <li><label id="store-user"></label></li>
-                <li><a href=signin.html>Sign In</a></li>
-                <li><a href=destinations.html>Destinations</a></li>
+                <li><a href="signin.html" data-target="signin" class="active">Sign In</a></li>
+                <li><a href="destinations.html" data-target="destinations">Destinations</a></li>
                 <li><a href="#">Reviews</a></li>
             </ul>
         </nav>
@@ -92,5 +92,15 @@
         </div>
     </main>
     <script src="signin-script.js"></script>
+    <script>
+        const currentPage = document.querySelector('body').id;
+        const navLinks = document.querySelectorAll('nav li a');
+        
+        navLinks.forEach(link => {
+          if (link.dataset.target === currentPage) {
+            link.classList.add('active');
+          }
+        });
+    </script> 
 </body>
 </html>
