@@ -35,7 +35,7 @@ nav ul{
     flex: 5;
     cursor: pointer;
 }
-#store-user{
+.stored-user{
     color:#F08C4A;
 }
 nav li{
@@ -152,7 +152,7 @@ nav li:hover::after{
     background-color:#223656;
     color: #EED590;
 }
-.first-three{
+.first-two{
     display: flex;
     justify-content: space-between;
     margin: 30px;
@@ -188,7 +188,7 @@ nav li:hover::after{
     border-radius: 10px;
     transition: transform 0.5s ease-in-out;
 }
-.card button{
+.btn-book-tour{
     /* top: 100%; */
     padding: 10px 30px;
     border-radius: 15px;
@@ -198,6 +198,10 @@ nav li:hover::after{
     font-size: 18px;
     /* position: absolute; */
     border-color: #223656;
+}
+.btn-book-tour:hover{
+    color: #f04a4a;
+    background-color: #EED590;
 }
 .carousel-arrow {
     /* position: absolute; */
@@ -317,6 +321,9 @@ nav li:hover::after{
     cursor: pointer;
     display: none;
 }
+.fa-arrow-left:hover{
+    color: #F08C4A;
+}
 .joiner-signup{
     display: none;
     height: max-content;
@@ -347,12 +354,18 @@ nav li:hover::after{
     color:#223656;
     font-size: 1.2em;
 }
+.btn-signin:hover{
+    background-color: #EED590;
+    color: #f04a4a;
+}
 .div-btn-signin a{
     color: #223656;
     font-family: 'Montserrat', sans-serif;
-    text-decoration: underline;
     cursor: pointer;
     margin-top: 40px;
+}
+.div-btn-signin a:hover{
+    text-decoration: underline;
 }
 .joiner-signup .form-group{
     margin-top: 10px;
@@ -455,6 +468,10 @@ input[type="radio"]{
     background-color:#F08C4A;
     color:#223656;
     font-size: 1.2em;
+}
+#btn-addtour:hover{
+    color: #f04a4a;
+    background-color: #EED590;
 }
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -618,11 +635,19 @@ input[type=number]::-webkit-inner-spin-button {
 .div-btn-edit #btn-save-edit{
     margin-left: 60px;
 }
+#btn-save-edit:hover, #btn-print:hover{
+    color: #f04a4a;
+    background-color: #EED590;
+}
 .div-btn-edit #btn-delete-tour{
-    width: 150px;
+    /* width: 150px; */
     background-color: #f04a4a;
     color: #EED590;
     float: right;
+}
+#btn-delete-tour:hover{
+    color: #f04a4a;
+    background-color: #223656;
 }
 
 /* View Tour Page */

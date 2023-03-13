@@ -18,9 +18,9 @@
                 <div class="div-logo">
                     <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
                 </div>
-                <li><label id="store-user"></label></li>
-                <li><a href="tour-history.html" data-target="history">Tour History</a></li>
+                <li><label class="stored-user">No User</label></li>
                 <li><a href="destinations.html" data-target="destinations">Destinations</a></li>
+                <li><a href="tour-history.html" data-target="history">Tour History</a></li>
             </ul>
         </nav>
     </header>
@@ -116,51 +116,6 @@
         <div class="listour-img-b2"></div>
     </div>  
     </main>
-    <!-- <script src="book-tour-script.js"></script> -->
-    <script>
-        const OUT_DEST = localStorage.getItem("output_destination");
-        document.getElementById("destination").value = OUT_DEST;
-        const TDATE1 = localStorage.getItem("output_date1");
-        document.getElementById("label-date1").textContent = TDATE1;
-        const TDATE2 = localStorage.getItem("output_date2");
-        document.getElementById("label-date2").textContent = TDATE2;
-        const TDATE3 = localStorage.getItem("output_date3");
-        document.getElementById("label-date3").textContent = TDATE3;
-
-        const PRICE_3D = localStorage.getItem("output_3d_price");
-        const PRICE_2D = localStorage.getItem("output_2d_price");
-        const RADIO_3D = document.querySelector("#three-days");
-        const RADIO_2D = document.querySelector("#two-days");
-        const TOUR_AMOUNT = document.querySelector("#amount");
-        RADIO_3D.addEventListener('change', function(){
-            TOUR_AMOUNT.value = PRICE_3D;
-        });
-        RADIO_2D.addEventListener('change', function(){
-            TOUR_AMOUNT.value = PRICE_2D;
-        });
-
-        const inclusions = localStorage.getItem("output_inclusions");
-        const inclusionList = document.getElementById("inclusion-ul");
-        if (inclusions) {
-        const inclusionsArray = JSON.parse(inclusions);
-
-        for (let i = 0; i < inclusionsArray.length; i++) {
-            const li = document.createElement("li");
-            li.textContent = inclusionsArray[i];
-            inclusionList.appendChild(li);
-        }
-        }
-
-
-
-        // if (OUT_DEST) {
-        //     document.getElementById("destination").value = OUT_DEST;
-        //     //document.getElementById("label-date1").textContent = TDATE1;
-        //     //localStorage.removeItem("output_destination"); // Remove the item to clean up after ourselves
-        // } else {
-        //   document.getElementById("destination").value = "Value not found";
-        //   //document.getElementById("label-date1").textContent = "Value not found";
-        // }
-      </script>
+    <script src="book-tour-script.js"></script>
 </body>
 </html>
