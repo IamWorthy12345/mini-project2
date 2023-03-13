@@ -75,7 +75,6 @@ nav li:hover::after{
     top: 0;
     background-color: #223656;
     background-image: url("images/hero-bg.jpg");
-    background-attachment: fixed;
     background-size: cover;
     z-index: -1;
     height: 100vh;
@@ -152,7 +151,7 @@ nav li:hover::after{
     background-color:#223656;
     color: #EED590;
 }
-.first-two{
+.by-two{
     display: flex;
     justify-content: space-between;
     margin: 30px;
@@ -227,10 +226,10 @@ nav li:hover::after{
     left: 100%;
     z-index: 3;
 }
-#card1{
+#card1, #card3{
     flex: 1;
 }
-#card2{
+#card2, #card4{
     flex: 1;
 }
 /* #card3{
