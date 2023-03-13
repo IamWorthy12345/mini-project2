@@ -574,3 +574,41 @@ input[type=number]::-webkit-inner-spin-button {
     color:#223656;
     font-size: 0.9em;
 }
+
+/* Edit Tour Page */
+.editour-img-b1{
+    background-image: url(images/edit-tour-bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+.editour-img-b2{
+    background-image: url(images/edit-tour-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+.div-btn-edit{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.div-btn-edit button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px outset #EED590;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F08C4A;
+    color:#223656;
+    font-size: 1.2em;
+}
+.div-btn-edit #btn-save-edit{
+    margin-left: 60px;
+}
+.div-btn-edit #btn-delete-tour{
+    width: 150px;
+    background-color: #f04a4a;
+    color: #EED590;
+    float: right;
+}

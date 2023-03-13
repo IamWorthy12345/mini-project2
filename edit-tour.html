@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Janela Daculong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List a tour</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <script src="https://kit.fontawesome.com/5f8be564ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="other-page-header">
+        <nav>
+            <ul>
+                <div class="div-logo">
+                    <a href="index.html"><img src="images/logo1.png" id="logo" width="200px"></a>
+                </div>
+                <li><label id="store-user"></label></li>
+                <li><a href="tour-history.html">Tour History</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="book-tour-container">
+        <div class="editour-img-b1"></div>
+        <form>
+            <div class="book-tour-title">
+                <h3>Edit This Tour</h3>
+            </div>
+            <div id="form-book-tour">
+                <div class="form-group">
+                    <label>Destination:</label>
+                    <div class="form-subgroup">
+                        <input type="text" id="destination" name="destination" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose Duration</label>
+                    <div class="form-subgroup">
+                        <input type="radio" id="three-days" name="duration">
+                        <label for="three-days" class="tour-duration">3 Days 2 Nights</label>
+                        <input type="radio" id="two-days" name="duration">
+                        <label for="two-days" class="tour-duration">2 Days 1 Night</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Choose Start Date</label>
+                    <div class="form-subgroup" id="tour-dates">
+                        <input type="radio" id="date-1" name="tour-date">
+                        <label for="date-1" id="label-date1" class="tour-date"></label>
+                        <input type="radio" id="date-2" name="tour-date">
+                        <label for="date-2" id="label-date2" class="tour-date"></label>
+                        <input type="radio" id="date-3" name="tour-date">
+                        <label for="date-3" id="label-date3" class="tour-date"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>From:</label>
+                    <input type ="date" id="from-date" name="from-date" disabled>
+                </div>
+                <div class="form-group">
+                    <label>To:</label>
+                    <input type ="date" id="to-date" name="to-date" disabled>
+                </div>
+                <div class="form-group" id="avail-seats">
+                    <label>No. of Seats:</label>
+                    <input type="number" id="seat-count" name="seat-count">
+                </div>
+                <div class="form-group">
+                    <label>Choose Pick-Up Location</label>
+                    <select id="pick-up-loc" name="pick-up-loc" class="pick-up-loc">
+                        <option value="">Robinsons Galleria</option>
+                        <option value="">SM Sta Rosa</option>
+                        <option value="">Alabang Festival Mall</option>
+                        <option value="">SM Lucena</option>
+                        <option value="">BGC Market Market</option>
+                        <option value="">SM Mall of Asia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Choose Pick-Up Time</label>
+                    <select id="pick-up-time" name="pick-up-time" class="pickup-time">
+                        <option value="">4:00am</option>
+                        <option value="">6:00am</option>
+                        <option value="">6:00pm</option>
+                        <option value="">7:00pm</option>
+                    </select>
+                </div>
+                <div class="form-group" id="tour-inclusions">
+                    <label>Tour Inclusions</label>
+                    <div id="inclusion-div" class="form-subgroup">
+                        <ul id="inclusion-ul">
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tour Price:</label>
+                    <div class="form-subgroup" id="input-num">
+                        <input type="number" name="amount" id="amount" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Travel Made by:</label>
+                    <input type="text" id="book-by" name="book-by" placeholder="Type your Full Name" required>
+                </div>
+                <div class="div-btn-edit">
+                    <button id="btn-save-edit">Save Changes</button>
+                    <button id="btn-delete-tour">Delete This Tour</button>
+                </div>
+            </div>
+        </form>
+        <div class="editour-img-b2"></div>
+    </div>  
+    </main>
+    <!-- <script src="book-tour-script.js"></script> -->
+</body>
+</html>
